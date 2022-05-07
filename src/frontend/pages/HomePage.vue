@@ -1,12 +1,9 @@
-<script setup lang="ts">
-</script>
-
 <template>
   <div class="container" />
 </template>
 
 <style scoped>
-.container, .container:parent {
+.container {
   width: 100%;
   height: 100%;
   background: linear-gradient(

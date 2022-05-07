@@ -6,4 +6,9 @@ export default defineConfig({
   plugins: [vue()],
   root: '/opt/app/src/frontend',
   publicDir: '/opt/app/public',
+  resolve: {
+    alias: {
+      '@': '/opt/app/src/frontend',
+    },
+  },
 });
