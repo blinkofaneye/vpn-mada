@@ -47,7 +47,7 @@ defineEmits(['update:modelValue']);
     justify-content: center;
 }
 .menu-content--blur-layer {
-    filter: blur(10px);
+    filter: blur(2px);
     overflow-y: hidden;
     max-height: 100vh;
 }
