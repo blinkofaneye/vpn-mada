@@ -10,6 +10,7 @@ export const parameters = {
     default: 'dark',
     values: [
       {name: 'dark', value: '#0A0A18'},
+      {name: 'light', value: '#fff'},
     ],
   },
 }
