@@ -14,7 +14,7 @@ import MoreButton from '@/components/buttons/MoreButton.vue';
         et bien d’autres sans aucune restriction.
       </p>
       <p>
-        Vos données seront aussi protégés grâce à l’utilisation
+        Vos données seront aussi protégées grâce à l’utilisation
         de notre service de vpn. Optez pour VPN Mada dès maintenant !
       </p>
       <MoreButton class="more-button" />
