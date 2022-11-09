@@ -1,6 +1,9 @@
 <template>
-  <button class="more-button--container">
-    En savoir plus
+  <button
+    class="more-button--container"
+    @click="$router.push('/login')"
+  >
+    Connexion
     <svg
       width="30"
       height="30"

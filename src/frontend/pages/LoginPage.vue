@@ -61,7 +61,7 @@ const onLogin = () => {
   ].includes(data.value.login) &&
   data.value.password === 'iestime2022';
   if (didPass) {
-    router.replace('/profiles-management-page');
+    router.replace('/profiles');
   } else {
     alert('Mot de passe ou email invalide !');
   }
