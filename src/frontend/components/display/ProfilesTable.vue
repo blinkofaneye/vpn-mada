@@ -27,37 +27,37 @@ const items = ref([
     name: 'Mon ordinateur',
     file: 1,
     date: '09/11/2022',
-    url: '/client-1-profile.ovpn',
+    url: import.meta.env.BASE_URL + 'client-1-profile.ovpn',
   },
   {
     name: 'Ordinateur du salon',
     file: 2,
     date: '09/11/2022',
-    url: '/client-2-profile.ovpn',
+    url: import.meta.env.BASE_URL + 'client-2-profile.ovpn',
   },
   {
     name: 'Mon ordinateur',
     file: 3,
     date: '09/11/2022',
-    url: '/client-3-profile.ovpn',
+    url: import.meta.env.BASE_URL + 'client-3-profile.ovpn',
   },
   {
     name: 'Ordinateur du salon',
     file: 4,
     date: '09/11/2022',
-    url: '/client-4-profile.ovpn',
+    url: import.meta.env.BASE_URL + 'client-4-profile.ovpn',
   },
   {
     name: 'Mon ordinateur',
     file: 5,
     date: '09/11/2022',
-    url: '/client-5-profile.ovpn',
+    url: import.meta.env.BASE_URL + 'client-5-profile.ovpn',
   },
   {
     name: 'Ordinateur du salon',
     file: 6,
     date: '09/11/2022',
-    url: '/client-6-profile.ovpn',
+    url: import.meta.env.BASE_URL + 'client-6-profile.ovpn',
   },
 ]);
 
