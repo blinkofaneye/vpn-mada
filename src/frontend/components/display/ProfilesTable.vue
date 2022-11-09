@@ -35,6 +35,30 @@ const items = ref([
     date: '09/11/2022',
     url: '',
   },
+  {
+    name: 'Mon ordinateur',
+    file: 3,
+    date: '09/11/2022',
+    url: 'https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_dark_1x_r5.png',
+  },
+  {
+    name: 'Ordinateur du salon',
+    file: 4,
+    date: '09/11/2022',
+    url: '',
+  },
+  {
+    name: 'Mon ordinateur',
+    file: 5,
+    date: '09/11/2022',
+    url: 'https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_dark_1x_r5.png',
+  },
+  {
+    name: 'Ordinateur du salon',
+    file: 6,
+    date: '09/11/2022',
+    url: '',
+  },
 ]);
 
 const onDelete = (file: number) => {

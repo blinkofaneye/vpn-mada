@@ -46,10 +46,6 @@
           <ContentHeading>
             Liste de vos profiles
           </ContentHeading>
-          <IconButton
-            color="#00A0FF"
-            :icon="CrossIcon"
-          />
         </div>
       </div>
       <ProfilesTable />
@@ -62,9 +58,7 @@ import CenterLayout from '@/components/layouts/CenterLayout.vue';
 import ContentText from '@/components/typography/ContentText.vue';
 import GooglePlay from '@/assets/svg/google-play.svg';
 import AppleStore from '@/assets/svg/apple-store.svg';
-import CrossIcon from '@/assets/svg/cross.svg';
 import ContentHeading from '@/components/typography/ContentHeading.vue';
-import IconButton from '@/components/buttons/IconButton.vue';
 import ProfilesTable from '@/components/display/ProfilesTable.vue';
 </script>
 
