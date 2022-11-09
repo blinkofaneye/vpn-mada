@@ -4,11 +4,11 @@
       <span class="round" />
       Actif
     </td>
-    <td>Mon ordinateur</td>
-    <td>client-1-profile.ovpn</td>
-    <td>09/11/2022</td>
+    <td>{{ props.name }}</td>
+    <td>client-{{ props.file }}-profile.ovpn</td>
+    <td>{{ props.date }}</td>
     <td>
-      <button>
+      <button @click="emit('download')">
         <svg
           width="25"
           height="25"
@@ -30,7 +30,7 @@
           />
         </svg>
       </button>
-      <button>
+      <button @click="emit('delete')">
         <svg
           width="25"
           height="25"
@@ -51,6 +51,29 @@
     </td>
   </tr>
 </template>
+
+<script lang="ts" setup>
+import {defineProps, defineEmits} from 'vue';
+const emit = defineEmits(['delete', 'download']);
+const props = defineProps({
+  name: {
+    type: String,
+    required: true,
+  },
+  url: {
+    type: String,
+    required: true,
+  },
+  file: {
+    type: Number,
+    required: true,
+  },
+  date: {
+    type: String,
+    required: true,
+  },
+});
+</script>
 
 <style scoped>
 tr {
