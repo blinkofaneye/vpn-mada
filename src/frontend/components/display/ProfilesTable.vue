@@ -27,37 +27,37 @@ const items = ref([
     name: 'Mon ordinateur',
     file: 1,
     date: '09/11/2022',
-    url: 'https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_dark_1x_r5.png',
+    url: '/client-1-profile.ovpn',
   },
   {
     name: 'Ordinateur du salon',
     file: 2,
     date: '09/11/2022',
-    url: '',
+    url: '/client-2-profile.ovpn',
   },
   {
     name: 'Mon ordinateur',
     file: 3,
     date: '09/11/2022',
-    url: 'https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_dark_1x_r5.png',
+    url: '/client-3-profile.ovpn',
   },
   {
     name: 'Ordinateur du salon',
     file: 4,
     date: '09/11/2022',
-    url: '',
+    url: '/client-4-profile.ovpn',
   },
   {
     name: 'Mon ordinateur',
     file: 5,
     date: '09/11/2022',
-    url: 'https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_dark_1x_r5.png',
+    url: '/client-5-profile.ovpn',
   },
   {
     name: 'Ordinateur du salon',
     file: 6,
     date: '09/11/2022',
-    url: '',
+    url: '/client-6-profile.ovpn',
   },
 ]);
 
@@ -74,7 +74,7 @@ const onDownload = (file: number) => {
 
   if (item) {
     const anchor = document.createElement('a');
-    anchor.target = '__blank';
+    anchor.target = '_blank';
     anchor.href = item.url;
     anchor.download = `client-${item.file}-profile.ovpn`;
     anchor.click();
