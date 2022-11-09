@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-import MoreButton from '@/components/buttons/MoreButton.vue';
-</script>
-
 <template>
   <div class="container">
     <div class="content">
@@ -18,9 +14,21 @@ import MoreButton from '@/components/buttons/MoreButton.vue';
         de notre service de vpn. Optez pour VPN Mada dès maintenant !
       </p>
       <MoreButton class="more-button" />
+      <router-link
+        title="Contact"
+        to="/contact"
+        class="contact"
+      >
+        Nous contacter
+      </router-link>
     </div>
   </div>
 </template>
+
+<script lang="ts" setup>
+import {RouterLink} from 'vue-router';
+import MoreButton from '@/components/buttons/MoreButton.vue';
+</script>
 
 <style lang="scss" scoped>
 .container {
@@ -60,5 +68,17 @@ import MoreButton from '@/components/buttons/MoreButton.vue';
 
 .more-button {
     margin-top: 3.4vh;
+}
+
+.contact {
+    font-family: Roboto;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
 }
 </style>

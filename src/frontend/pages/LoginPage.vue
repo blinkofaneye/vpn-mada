@@ -42,12 +42,17 @@
 <script lang="ts" setup>
 import {ref} from 'vue';
 import {useRouter} from 'vue-router';
+import {store} from '@/store';
 import ContentHeading from '@/components/typography/ContentHeading.vue';
 import TextInput from '@/components/inputs/TextInput.vue';
 import SendButton from '@/components/buttons/SendButton.vue';
 import WavesFooter from '@/components/decors/WavesFooter.vue';
 
 const router = useRouter();
+
+if (store.authenticated) {
+  router.replace('/profiles');
+}
 
 const data = ref({
   login: '',
@@ -61,6 +66,7 @@ const onLogin = () => {
   ].includes(data.value.login) &&
   data.value.password === 'iestime2022';
   if (didPass) {
+    store.authenticated = true;
     router.replace('/profiles');
   } else {
     alert('Mot de passe ou email invalide !');

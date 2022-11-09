@@ -3,7 +3,7 @@
     class="more-button--container"
     @click="$router.push('/login')"
   >
-    Connexion
+    {{ store.authenticated ? 'Profiles' : 'Connexion' }}
     <svg
       width="30"
       height="30"
@@ -20,6 +20,10 @@
     </svg>
   </button>
 </template>
+
+<script lang="ts" setup>
+import {store} from '@/store';
+</script>
 
 <style lang="scss" scoped>
 .more-button {
