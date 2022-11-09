@@ -9,17 +9,26 @@
         </template>
       </ContentHeading>
 
-      <TextInput id="phone">
+      <TextInput
+        id="phone"
+        :value="data.login"
+        @input="data.login = $event.target.value"
+      >
         Numéro de téléphone
       </TextInput>
 
       <div class="password">
-        <TextInput id="password">
+        <TextInput
+          id="password"
+          type="password"
+          :value="data.password"
+          @input="data.password = $event.target.value"
+        >
           Mot de passe
         </TextInput>
       </div>
 
-      <SendButton>
+      <SendButton @click="onLogin">
         Se connecter
       </SendButton>
     </div>
@@ -31,10 +40,32 @@
 </template>
 
 <script lang="ts" setup>
+import {ref} from 'vue';
+import {useRouter} from 'vue-router';
 import ContentHeading from '@/components/typography/ContentHeading.vue';
 import TextInput from '@/components/inputs/TextInput.vue';
 import SendButton from '@/components/buttons/SendButton.vue';
 import WavesFooter from '@/components/decors/WavesFooter.vue';
+
+const router = useRouter();
+
+const data = ref({
+  login: '',
+  password: '',
+});
+
+const onLogin = () => {
+  const didPass = [
+    'mratiarison@gmail.com',
+    'administrateur@iestime.com',
+  ].includes(data.value.login) &&
+  data.value.password === 'iestime2022';
+  if (didPass) {
+    router.replace('/profiles-management-page');
+  } else {
+    alert('Mot de passe ou email invalide !');
+  }
+};
 </script>
 
 <style lang="scss" scoped>

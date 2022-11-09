@@ -5,16 +5,26 @@
     </label>
     <input
       :id="id"
-      type="text"
+      :type="type"
+      :value="value"
+      @input="emit('input', $event)"
     >
   </div>
 </template>
 
 <script lang="ts" setup>
-import {defineProps} from 'vue';
-
+import {defineProps, defineEmits} from 'vue';
+const emit = defineEmits(['input']);
 defineProps({
   id: {
+    type: String,
+    required: true,
+  },
+  type: {
+    type: String,
+    default: 'text',
+  },
+  value: {
     type: String,
     required: true,
   },

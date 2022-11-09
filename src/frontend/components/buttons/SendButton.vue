@@ -2,6 +2,7 @@
   <button
     :disabled="loading"
     class="container"
+    @click="emit('click', $event)"
   >
     <slot v-if="!loading" />
     <div v-else>
@@ -11,7 +12,9 @@
 </template>
 
 <script lang="ts" setup>
-import {defineProps} from 'vue';
+import {defineProps, defineEmits} from 'vue';
+
+const emit = defineEmits(['click']);
 
 defineProps({
   loading: {
