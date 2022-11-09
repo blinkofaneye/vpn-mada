@@ -27,7 +27,7 @@
       </div>
 
       <div class="send-button">
-        <SendButton>
+        <SendButton @click="onSend">
           Envoyer
         </SendButton>
       </div>
@@ -45,6 +45,10 @@ import TextInput from '@/components/inputs/TextInput.vue';
 import TextAreaInput from '@/components/inputs/TextAreaInput.vue';
 import SendButton from '@/components/buttons/SendButton.vue';
 import WavesFooter from '@/components/decors/WavesFooter.vue';
+
+const onSend = () => {
+  alert('Votre message a bien été reçu. Merci et à bientôt');
+};
 </script>
 
 <style lang="scss" scoped>
