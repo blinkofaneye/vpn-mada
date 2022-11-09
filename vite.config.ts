@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue';
 export default defineConfig({
   plugins: [vue()],
   root: '/opt/app/src/frontend',
+  base: '/vpn-mada/',
   publicDir: '/opt/app/public',
   resolve: {
     alias: {
