@@ -21,6 +21,9 @@
       >
         Nous contacter
       </router-link>
+      <div>
+        <CopyrightText />
+      </div>
     </div>
   </div>
 </template>
@@ -28,6 +31,7 @@
 <script lang="ts" setup>
 import {RouterLink} from 'vue-router';
 import MoreButton from '@/components/buttons/MoreButton.vue';
+import CopyrightText from '@/components/display/CopyrightText.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -74,11 +78,18 @@ import MoreButton from '@/components/buttons/MoreButton.vue';
     font-family: Roboto;
     color: #fff;
     position: absolute;
-    bottom: 20px;
+    bottom: 50px;
     left: 50%;
     transform: translate(-50%);
     text-decoration: none;
     border-bottom: 1px solid #fff;
     padding-bottom: 5px;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
 }
 </style>
